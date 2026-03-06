@@ -17,7 +17,7 @@
 安装（开发模式）：
 
 ```bash
-cd /Users/gulucaptain/Documents/Github/ElephantToolbox
+cd ./ElephantToolbox
 pip install -e .
 ```
 
