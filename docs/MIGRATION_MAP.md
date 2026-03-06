@@ -1,0 +1,90 @@
+# Migration Map
+
+## Directory migration
+- `Annotations/` -> `scripts/annotations/`
+- `Audio/` -> `scripts/audio/`
+- `Diffuser/` -> `scripts/ml/embeddings/`
+- `Excels/` -> `scripts/data/excel/`
+- `Files/` -> `scripts/data/files/`
+- `Food/` -> `scripts/misc/`
+- `GPUs/` -> `scripts/gpu/`
+- `Gifs/` -> `scripts/image/`
+- `Image_processing/` -> `scripts/image_processing/`
+- `Images/` -> `scripts/image/`
+- `Language/` -> `scripts/data/text/`
+- `Optical_algo/` -> `scripts/optical_flow/`
+- `Painting/` -> `scripts/visualization/`
+- `Processes/` -> `scripts/process/`
+- `Strings/` -> `scripts/data/text/`
+- `Videos/` -> `scripts/video/`
+- `pca/` -> `scripts/analysis/`
+- `common/` removed (logic absorbed by `toolbox/core/`)
+
+## File migration (old -> new)
+- `Files/data_crowler.py` -> `scripts/data/files/data_crawler.py`
+- `Files/down_file.py` -> `scripts/data/files/download_file.py`
+- `Files/down_huggingface.py` -> `scripts/data/files/download_huggingface.py`
+- `Files/file_rename.py` -> `scripts/data/files/rename_files.py`
+- `Files/kuake_transfor.py` -> `scripts/data/files/box_transfer.py`
+- `Files/down_m3u8.sh` -> `scripts/data/files/download_m3u8.sh`
+- `Excels/read_excel.py` -> `scripts/data/excel/read_excel.py`
+- `Language/PoS.py` -> `scripts/data/text/pos_tagging.py`
+- `Strings/person_name_transfer.py` -> `scripts/data/text/person_name_transfer.py`
+- `Annotations/read_json.py` -> `scripts/annotations/read_json.py`
+- `Annotations/birthday_check.py` -> `scripts/annotations/birthday_check.py`
+- `Audio/add_audio_to_video.py` -> `scripts/audio/add_audio_to_video.py`
+- `Audio/draw_audio_wave.py` -> `scripts/audio/draw_audio_wave.py`
+- `GPUs/test_gpu.py` -> `scripts/gpu/test_gpu.py`
+- `Gifs/frame2gif.py` -> `scripts/image/frame_to_gif.py`
+- `Gifs/gif2frames.py` -> `scripts/image/gif_to_frames.py`
+- `Gifs/merge_gifs.py` -> `scripts/image/merge_gifs.py`
+- `Images/transfer_png_jpg.py` -> `scripts/image/convert_png_to_jpg.py`
+- `Images/get_entity_from_mask.py` -> `scripts/image/extract_entity_from_mask.py`
+- `Images/image_deblur.py` -> `scripts/image/image_gaussian_blur.py`
+- `Images/merge_image_image.py` -> `scripts/image/merge_random_images.py`
+- `Images/merge_images.py` -> `scripts/image/merge_images.py`
+- `Images/split_merged_image.py` -> `scripts/image/split_merged_image.py`
+- `Images/visualization_pose_image_enhancement.py` -> `scripts/image/enhance_pose_image.py`
+- `Images/any_size_to_target_size.py` -> `scripts/image/crop_to_target_size.py`
+- `Images/image_resize.py` -> `scripts/image/resize_image.py`
+- `Images/create_images.py` -> `scripts/image/create_images.py`
+- `Image_processing/optical_flow_algo.py` -> `scripts/image_processing/optical_flow_motion_selector.py`
+- `Image_processing/hand_detection.py` -> `scripts/image_processing/hand_detection.py`
+- `Image_processing/discrete_wavelet_transform.py` -> `scripts/image_processing/discrete_wavelet_transform.py`
+- `Image_processing/blur_wavelet.py` -> `scripts/image_processing/blur_wavelet.py`
+- `Optical_algo/optical_flow_2.py` -> `scripts/optical_flow/optical_flow_between_images.py`
+- `Optical_algo/draw_optical_flow.py` -> `scripts/optical_flow/draw_optical_flow.py`
+- `Painting/draw_radio.py` -> `scripts/visualization/draw_grouped_bar.py`
+- `Painting/draw_video_temporal.py` -> `scripts/visualization/draw_video_temporal.py`
+- `Painting/draw_word_cloud.py` -> `scripts/visualization/draw_word_cloud.py`
+- `Processes/process_function.py` -> `scripts/process/process_function.py`
+- `Processes/multi_process_cpu.py` -> `scripts/process/multi_process_cpu.py`
+- `Processes/multi_process_cpu_clear.py` -> `scripts/process/multi_process_cpu_clear.py`
+- `Processes/multi_process_gpu.py` -> `scripts/process/multi_process_gpu.py`
+- `Processes/multi_process_gpu_clear.py` -> `scripts/process/multi_process_gpu_clear.py`
+- `Videos/video_split.py` -> `scripts/video/split_video.py`
+- `Videos/video_splitting.py` -> `scripts/video/split_videos_in_half.py`
+- `Videos/video2audio.py` -> `scripts/video/video_to_audio.py`
+- `Videos/video2gif.py` -> `scripts/video/video_to_gif.py`
+- `Videos/video_gif2frame.py` -> `scripts/video/media_to_frames.py`
+- `Videos/frame2video.py` -> `scripts/video/frames_to_video.py`
+- `Videos/video_resize.py` -> `scripts/video/resize_video.py`
+- `Videos/extract_video.py` -> `scripts/video/crop_video_center.py`
+- `Videos/video_enhanced.py` -> `scripts/video/blacken_video_edges.py`
+- `Videos/merge_image_and_video.py` -> `scripts/video/merge_image_and_video.py`
+- `Videos/merge_two_frames_to_video.py` -> `scripts/video/merge_two_frame_folders_to_video.py`
+- `Videos/merge_video_video.py` -> `scripts/video/merge_videos_side_by_side.py`
+- `Videos/merge_video_video2.py` -> `scripts/video/merge_videos_grid.py`
+- `Videos/merged_video_pose_enhancement.py` -> `scripts/video/enhance_pose_video.py`
+- `Diffuser/load_img_videos.py` -> `scripts/ml/embeddings/load_image_video_samples.py`
+- `Diffuser/prepare_image_for_clip.py.py` -> `scripts/ml/embeddings/prepare_image_for_clip.py`
+- `Diffuser/prepare_image_for_vae.py` -> `scripts/ml/embeddings/prepare_image_for_vae.py`
+- `blip.py` -> `scripts/ml/embeddings/blip_similarity.py`
+- `pca/pca_data_analyze.py` -> `scripts/analysis/pca_data_analysis.py`
+- `Food/what_do_we_eat_today.py` -> `scripts/misc/meal_picker.py`
+- `test.py` -> `scripts/misc/smoke_test.py`
+
+## Unified CLI
+- Entry: `python toolbox_cli.py`
+- List commands: `python toolbox_cli.py --list`
+- List command aliases: `python toolbox_cli.py --list-all`

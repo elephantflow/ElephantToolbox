@@ -1,0 +1,10 @@
+eva-decord
+matplotlib
+opencv-python
+tqdm
+imageio
+gradio
+moviepy
+pillow
+requests
+nltk

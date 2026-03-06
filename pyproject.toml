@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "elephant-toolbox"
+version = "0.3.10"
+description = "Unified toolbox for image/video/audio/data/nlp utilities with reusable Python APIs."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "ElephantToolbox Contributors" }
+]
+dependencies = [
+  "eva-decord",
+  "matplotlib",
+  "opencv-python",
+  "tqdm",
+  "imageio",
+  "moviepy",
+  "pillow",
+  "requests",
+  "nltk"
+]
+
+[project.optional-dependencies]
+ui = ["gradio"]
+ai = ["torch", "transformers", "qwen-vl-utils", "pandas"]
+
+[project.scripts]
+toolbox-cli = "toolbox.cli.main:main"
+elephant-toolbox = "toolbox.cli.main:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["toolbox*"]
